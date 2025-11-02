@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TeKah</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #d32f2f; /* merah */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .login-box {
+      background-color: #fff7f7;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+      width: 320px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      background: #ddd;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus {
+      background: #ccc;
+    }
+
+    button {
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 25px;
+      font-size: 14px;
+      cursor: pointer;
+      float: right;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .error {
+      background: #ffebee;
+      color: #c62828;
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin-top: 10px;
+      font-size: 14px;
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .login-box {
+        width: 90%;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>TeKah</h1>
+
+  <div class="login-box">
+    <form id="loginForm">
+      <label for="username">Masukkan Username</label>
+      <input type="text" id="username" name="username" placeholder="Username">
+
+      <label for="password">Masukkan Password</label>
+      <input type="password" id="password" name="password" placeholder="Password">
+
+      <button type="submit">Login</button>
+
+      <div class="error" id="errorMsg">Username dan password tidak boleh kosong</div>
+    </form>
+  </div>
+
+  <script>
+  const form = document.getElementById('loginForm');
+  const errorMsg = document.getElementById('errorMsg');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username === '' || password === '') {
+      errorMsg.style.display = 'block';
+    } else {
+      errorMsg.style.display = 'none';
+      window.location.href = "landingpage.html";
+    }
+  });
+  </script>
+</body>
+</html>
