@@ -14,17 +14,30 @@
 
 /* Sidebar */
 .sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #fff;
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-  padding: 20px;
-  transition: 0.3s;
+  transition: left 0.3s ease;
+  padding-top: 20px;
   z-index: 1000;
 }
+
+.sidebar a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
 #overlay {
   position: fixed;
   top: 0;
@@ -43,8 +56,11 @@
   font-size: 16px;
 }
 
-.close-btn {
-  font-size: 22px;
+.closebtn {
+  font-size: 25px;
+  display: block;
+  text-align: right;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -56,8 +72,6 @@
   padding: 15px 25px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1000;
 }
 
 .menu-btn {
@@ -167,11 +181,11 @@ footer {
   <div id="overlay" onclick="closeSidebar()"></div>
   <!-- Sidebar -->
   <div id="sidebar" class="sidebar">
-    <span class="close-btn" onclick="closeSidebar()">×</span>
-    <a href="home.html">Dashboard</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+    <a href="dashboard.html">Dashboard</a>
     <a href="mycourse.html">My Courses</a>
   </div>
-
+  <span class="menu-btn" onclick="openSidebar()">☰</span>
   <!-- Navbar -->
   <header class="navbar">
     <span class="menu-btn" onclick="openSidebar()">☰</span>
@@ -253,14 +267,12 @@ footer {
   </footer>
 
   <script>
-  function openSidebar() {
+    function openSidebar() {
     document.getElementById("sidebar").style.left = "0";
-    document.getElementById("overlay").style.display = "block";
-  }
-  function closeSidebar() {
-    document.getElementById("sidebar").style.left = "-260px";
-    document.getElementById("overlay").style.display = "none";
-  }
+    }
+    function closeSidebar() {
+    document.getElementById("sidebar").style.left = "-250px";
+    }
   </script>
 </body>
 </html>
