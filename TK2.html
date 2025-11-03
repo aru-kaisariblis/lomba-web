@@ -7,204 +7,206 @@
     <title>Kelas 1 - TeKah</title>
 
     <style>
-/* RESET DASAR */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+        /* RESET DASAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
 
-/* Sidebar */
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    transition: left 0.3s ease;
-    padding-top: 20px;
-    z-index: 1000;
-    /* Menambahkan ini agar padding tidak mengubah lebar */
-    box-sizing: border-box; 
-  }
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            transition: left 0.3s ease;
+            padding-top: 20px;
+            z-index: 1000;
+            /* Menambahkan ini agar padding tidak mengubah lebar */
+            box-sizing: border-box;
+        }
 
-  /* Ini adalah aturan .sidebar a yang BENAR */
-  .sidebar a {
-    display: block;
-    padding: 15px 25px;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-  }
+        /* Ini adalah aturan .sidebar a yang BENAR */
+        .sidebar a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+        }
 
-  .sidebar a:hover {
-    background-color: #f0f0f0;
-  }
+        .sidebar a:hover {
+            background-color: #f0f0f0;
+        }
 
-  #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    display: none;
-    z-index: 500;
-  }
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 500;
+        }
 
-  /* Aturan .sidebar a yang duplikat telah DIHAPUS dari sini */
+        /* Aturan .sidebar a yang duplikat telah DIHAPUS dari sini */
 
-  .closebtn {
-    font-size: 25px;
-    display: block;
-    text-align: right;
-    padding: 10px 15px; /* Disesuaikan agar rata */
-    cursor: pointer;
-  }
+        .closebtn {
+            font-size: 25px;
+            display: block;
+            text-align: right;
+            padding: 10px 15px;
+            /* Disesuaikan agar rata */
+            cursor: pointer;
+        }
 
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-  .navbar-left {
-      display: flex;
-      align-items: center;
-  }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
 
-  .navbar-left .menu-btn {
-      margin-right: 15px; 
-  }
+        .navbar-left .menu-btn {
+            margin-right: 15px;
+        }
 
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-  }
+        .menu-btn {
+            font-size: 24px;
+            cursor: pointer;
+        }
 
-  .logo {
-    font-size: 20px;
-    margin: 0;
-  }
+        .logo {
+            font-size: 20px;
+            margin: 0;
+        }
 
-  .nav-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-  }
+        .nav-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+        }
 
-  .btn {
-    background: black;
-    color: white;
-    border: none;
-    padding: 6px 14px;
-    cursor: pointer;
-  }
+        .btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            cursor: pointer;
+        }
 
-/* KONTEN UTAMA */
-.container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
+        /* KONTEN UTAMA */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
-.kelas h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
+        .kelas h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
 
-.desc {
-    color: #555;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
+        .desc {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
 
-.materi-section h3 {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-}
+        .materi-section h3 {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
 
-.materi-section ul {
-    margin-left: 1.2rem;
-    list-style-type: disc;
-}
+        .materi-section ul {
+            margin-left: 1.2rem;
+            list-style-type: disc;
+        }
 
-/* FORM INPUT */
-.sub-section {
-    margin-top: 2rem;
-}
+        /* FORM INPUT */
+        .sub-section {
+            margin-top: 2rem;
+        }
 
-.form-input {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-}
+        .form-input {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
 
-.form-input label {
-    margin-top: 0.5rem;
-    font-weight: 600;
-}
+        .form-input label {
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
 
-.form-input input {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-top: 0.3rem;
-}
+        .form-input input {
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 0.3rem;
+        }
 
-/* KELAS LAINNYA */
-.kelas-lainnya {
-    margin-top: 3rem;
-}
+        /* KELAS LAINNYA */
+        .kelas-lainnya {
+            margin-top: 3rem;
+        }
 
-.kelas-lainnya h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
+        .kelas-lainnya h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
 
-.kelas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-}
+        .kelas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
 
-.card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-}
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
 
-.card:hover {
-    transform: translateY(-5px);
-}
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
 
-.card h4 {
-    margin: 0.5rem;
-    font-size: 1.1rem;
-}
+        .card h4 {
+            margin: 0.5rem;
+            font-size: 1.1rem;
+        }
 
-.card p {
-    margin: 0 0.5rem 0.8rem;
-    color: #777;
-    font-size: 0.9rem;
-}
-    /* Footer */
-  .footer {
+        .card p {
+            margin: 0 0.5rem 0.8rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
             border-top: 1px solid #ddd;
             padding: 2rem 1rem;
             background-color: #fafafa;
@@ -253,55 +255,54 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
-
     </style>
-    
+
     <link rel="stylesheet" href="TK2.css" />
 </head>
 
 <body>
     <div id="overlay" onclick="closeSidebar()"></div>
 
-  <div id="sidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
-    <a href="lp.html">Dashboard</a>
-    <a href="mycourse.html">My Courses</a>
-  </div>
-  
-  <header class="navbar">
-    <div class="navbar-left">
-        <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
-        <h1 class="logo">TeKah</h1>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+        <a href="lp.html">Dashboard</a>
+        <a href="mycourse.html">My Courses</a>
     </div>
-    
-  </header>
 
-<script>
-  function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    var style = window.getComputedStyle(sidebar); 
+    <header class="navbar">
+        <div class="navbar-left">
+            <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
+            <h1 class="logo">TeKah</h1>
+        </div>
 
-    if (style.left === "0px") {
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
-  }
+    </header>
 
-  function openSidebar() {
-    document.getElementById("sidebar").style.left = "0";
-    document.getElementById("overlay").style.display = "block";
-  }
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var style = window.getComputedStyle(sidebar);
 
-  function closeSidebar() {
-    document.getElementById("sidebar").style.left = "-250px"; 
-    document.getElementById("overlay").style.display = "none";
-  }
-</script>
+            if (style.left === "0px") {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        }
+
+        function openSidebar() {
+            document.getElementById("sidebar").style.left = "0";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.left = "-250px";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
     <!-- Main Content -->
     <main class="container">
         <section class="kelas">
-            <h2>Kelas 1</h2>
+            <h2>Kelas 2</h2>
             <p class="desc">
                 Body text for your whole article or post. We'll put some lorem ipsum to show how a long text might
                 appear here.
@@ -314,7 +315,9 @@
             <div class="materi-section">
                 <h3>Presensi</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, magnam. Nam qui sapiente ut illo illum, unde aliquam non dicta accusamus doloremque quos, tempora delectus ratione voluptas pariatur officia temporibus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, magnam. Nam qui sapiente ut
+                    illo illum, unde aliquam non dicta accusamus doloremque quos, tempora delectus ratione voluptas
+                    pariatur officia temporibus.
                 </p>
                 <br>
                 <h3>Rencana Pembelajaran Semester</h3>
@@ -341,7 +344,7 @@
             <div class="kelas-grid">
                 <div class="card">
                     <img src="https://picsum.photos/300/200?random=1" alt="Kelas 2" />
-                    <h4>Kelas 2</h4>
+                    <h4>Kelas 1</h4>
                     <p>Lihat selengkapnya</p>
                 </div>
                 <div class="card">
