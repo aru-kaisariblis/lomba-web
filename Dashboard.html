@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeKah</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e5e5e5;
+            background-color: #fff;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .login-btn {
+            background: none;
+            border: 1px solid #000;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* MAIN SECTION */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .intro-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-text p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CTA BUTTON */
+        .button-center {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #333;
+        }
+
+        /* RELATED PRODUCTS */
+        .related {
+            margin-top: 3rem;
+        }
+
+        .related h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            overflow: hidden;
+            padding-bottom: 1rem;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h4 {
+            margin: 0.7rem 1rem 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        .product-card p {
+            margin: 0.2rem 1rem;
+            color: #555;
+        }
+
+        .price {
+            margin-left: 1rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 1px solid #ddd;
+            padding: 2rem 1rem;
+            background-color: #fafafa;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-left h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .social-icons a img {
+            width: 20px;
+            margin-right: 10px;
+            opacity: 0.8;
+        }
+
+        .social-icons a img:hover {
+            opacity: 1;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links div h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #444;
+            text-decoration: none;
+            margin: 0.2rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro-img {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .product-grid {
+                justify-content: center;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        <div id="overlay" onclick="closeSidebar()"></div><div id="sidebar" class="sidebar"><a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a><a href="dashboard.html">Dashboard</a><a href="mycourse.html">My Courses</a></div><header><div class="nav-left"><div class="menu-btn" onclick="toggleSidebar()">&#9776;
+        </div><h1>TeKah</h1></div>
+    </style>
+
+    <link rel="stylesheet" href="Dashboard.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="navbar">
+        <h1 class="logo">TeKah</h1>
+        <button class="login-btn">Log in</button>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <section class="intro">
+            <img src="https://picsum.photos/500/500?random=1" alt="TeKah image" class="intro-img">
+            <div class="intro-text">
+                <h2>TeKah</h2>
+                <p>
+                    Website ini merupakan Learning Management System (LMS) yang digunakan untuk mendukung dan
+                    memperlancar proses pembelajaran.
+                    Panduan penggunaan TeKah dapat dilihat pada menu homepage (dapat diakses baik sebelum maupun sesudah
+                    login).
+                    Fitur-fitur TeKah sangat affordable dan user friendly.
+                </p>
+            </div>
+        </section>
+
+        <div class="button-center">
+            <button class="cta-btn">Pergi Ke Website Resmi</button>
+        </div>
+
+        <!-- RELATED PRODUCTS -->
+        <section class="related">
+            <h3>Related products</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Product 1">
+                    <h4>Q&A</h4>
+                    <p>Lihat selengkapnya</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Product 2">
+                    <h4>Tutorial</h4>
+                    <p>Lihat selengkapnya</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>TeKah Page</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="fb"></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+                            alt="ig"></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="yt"></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div>
+                    <h4>Contact Person</h4>
+                    <a href="#">+62 812-3212-1233</a>
+                </div>
+            </div>
+    </footer>
+</body>
+
+</html>
