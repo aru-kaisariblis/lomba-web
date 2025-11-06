@@ -14,44 +14,6 @@
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-.sidebar {
-    height: 100%;
-    width: 250px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    transition: left 0.3s ease;
-    padding-top: 20px;
-    z-index: 1000;
-    /* Menambahkan ini agar padding tidak mengubah lebar */
-    box-sizing: border-box; 
-  }
-
-  /* Ini adalah aturan .sidebar a yang BENAR */
-  .sidebar a {
-    display: block;
-    padding: 15px 25px;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-  }
-
-  .sidebar a:hover {
-    background-color: #f0f0f0;
-  }
-
-  #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    display: none;
-    z-index: 500; 
-  }
     /* NAVBAR */
   .navbar {
             display: flex;
@@ -214,20 +176,8 @@
     </head>
 
 <body>
-    <div id="overlay" onclick="closeSidebar()"></div>
-
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
-        <a href="lp.html">Dashboard</a>
-        <a href="mycourse.html">My Courses</a>
-        <a href="kelas/TK1.html">Kelas 1</a>
-        <a href="kelas/TK2.html">Kelas 2</a>
-        <a href="kelas/TK3.html">Kelas 3</a>
-        <a href="kelas/TK4.html">Kelas 4</a>
-    </div>
 
     <header class="navbar">
-        <div class="menu-btn" onclick="openSidebar()">☰</div>
         <h1 class="logo">TeKah</h1>
         <button class="login-btn" onclick="window.location.href='login.html'">Log in</button>
     </header>
