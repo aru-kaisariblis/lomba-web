@@ -554,3 +554,176 @@ main {
         align-self: flex-end;
     }
 }
+
+/* tes */
+
+         .container {
+             background: #fff;
+             border-radius: 10px;
+             padding: 30px;
+             max-width: 800px;
+             margin: 0 auto;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         }
+    
+         h2 {
+             margin-bottom: 20px;
+         }
+    
+         .tabs {
+             display: flex;
+             border-bottom: 2px solid #ddd;
+             margin-bottom: 20px;
+         }
+    
+         .tab {
+             flex: 1;
+             text-align: center;
+             padding: 10px;
+             cursor: pointer;
+             font-weight: 500;
+             border-bottom: 3px solid transparent;
+             transition: all 0.3s;
+         }
+    
+         .tab.active {
+             border-bottom: 3px solid #000;
+         }
+    
+         .tab-content {
+             display: none;
+         }
+    
+         .tab-content.active {
+             display: block;
+         }
+    
+         label {
+             display: block;
+             margin-bottom: 6px;
+             font-weight: bold;
+         }
+    
+         input {
+             width: 100%;
+             padding: 10px;
+             margin-bottom: 15px;
+             border: 1px solid #ccc;
+             border-radius: 6px;
+         }
+    
+         button {
+             padding: 10px 20px;
+             background: #000;
+             color: #fff;
+             border: none;
+             border-radius: 6px;
+             cursor: pointer;
+         }
+    
+         button:hover {
+             background: #333;
+         }
+
+/* tes */
+
+.menu-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-container {
+    position: relative;
+}
+
+/* * [DIMODIFIKASI] Area profil sekarang tidak lagi memiliki
+     * 'cursor: pointer' karena bukan lagi tombol utama.
+    */
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* * [DIMODIFIKASI] Gambar profil sekarang menjadi tombolnya.
+    */
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    /* [PINDAH] Cursor pointer sekarang di sini */
+    transition: transform 0.2s ease;
+    /* [BARU] Efek klik kecil */
+}
+
+/* [BARU] Efek hover dan klik pada gambar */
+.profile-picture:hover {
+    opacity: 0.85;
+}
+
+.profile-picture:active {
+    transform: scale(0.95);
+    /* Sedikit mengecil saat diklik */
+}
+
+/* Style Dropdown (Sama seperti sebelumnya) */
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out,
+        transform 0.2s ease-out,
+        visibility 0.2s ease-out;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f4f4f4;
+}
+
+.profile-dropdown .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 6px 0;
+}
