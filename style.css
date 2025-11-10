@@ -1,0 +1,556 @@
+/* 1. Pengaturan Dasar & Sidebar Navigasi (.sidenav) */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.sidenav { /* Ini adalah sidebar NAVIGASI slide */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.sidenav a:hover {
+    background-color: #f0f0f0;
+}
+
+.sidenav .closebtn {
+    font-size: 25px;
+    display: block;
+    text-align: right;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 500;
+}
+
+/* 2. Header / Navbar (Umum untuk semua) */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ditambahkan agar ikon profil ke kanan */
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.nav-left { /* Ditambahkan untuk mengelompokkan menu & logo */
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px; 
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-profile {
+    /* margin-left: auto; (Tidak perlu jika pakai justify-content) */
+    display: flex;
+    align-items: center;
+}
+
+.nav-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-profile img:hover {
+    opacity: 0.8;
+}
+
+/* 3. Konten Utama (Layout) */
+
+/* Untuk lp.html & mycourse.html */
+main {
+    padding: 40px 50px;
+}
+
+/* Untuk ep.html */
+.container {
+    display: flex;
+    margin: 30px;
+    gap: 30px;
+}
+
+/* 4. Konten KHUSUS HALAMAN */
+
+/* -- DARI lp.html (Dashboard) -- */
+.welcome {
+    margin-bottom: 30px;
+}
+.task-calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.tasks, .calendar {
+    flex: 1;
+    min-width: 300px; 
+}
+.tasks ul {
+    list-style-type: none;
+    padding: 0;
+}
+.tasks li {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.tasks li strong {
+    font-size: 1.1em;
+}
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.calendar th {
+    background: #f4f4f4;
+}
+.calendar td:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* -- DARI mycourse.html -- */
+.content h2 {
+    margin-bottom: 5px;
+}
+.sub-title {
+    font-weight: bold;
+}
+
+/* -- KARTU (Digunakan oleh lp.html & mycourse.html) -- */
+/* -- KARTU (Digunakan oleh lp.html, mycourse.html, & TK1.html) -- */
+/* -- KARTU (Digunakan oleh lp.html, mycourse.html, & TK1.html) -- */
+.class-grid,
+.course-grid,
+.kelas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.card h3, .card h4 {
+    margin: 10px 15px;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: underline;
+}
+.card p {
+    margin: 0 15px 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* -- DARI ep.html (Profile) -- */
+.sidebar { /* Ini adalah sidebar PROFIL (statis) */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.profile-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.profile-img img {
+    width: 100%;
+    display: block;
+}
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.about h3,
+.facts h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #444;
+}
+.about p {
+    font-size: 14px;
+    color: #555;
+}
+.sidebar .social-icons { 
+    text-align: center;
+}
+.sidebar .social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+.facts p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+.profile-content {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.profile-content h1 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.tabs button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+}
+.tabs button.active {
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+.profile-form h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+.profile-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.profile-form input,
+.profile-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+.profile-form input:focus,
+.profile-form textarea:focus {
+    border-color: #000;
+}
+.save-btn {
+    margin-top: 25px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.save-btn:hover {
+    background-color: #000;
+}
+
+/* 5. Footer (Umum) */
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 2rem 1rem;
+    background-color: #fafafa;
+}
+/* ... (sisa kode footer Anda sama, tidak perlu disalin ulang) ... */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-left h3 {
+    margin-bottom: 0.8rem;
+}
+.footer .social-icons a img { 
+    width: 20px;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+.footer .social-icons a img:hover {
+    opacity: 1;
+}
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+.footer-links div h4 {
+    margin-bottom: 0.5rem;
+}
+.footer-links a {
+    display: block;
+    color: #444;
+    text-decoration: none;
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================================
+6. KONTEN HALAMAN KELAS (TK1, etc.) - BARU
+===============================================
+*/
+
+/* Mengganti .container (konflik) menjadi .class-container */
+.class-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.class-container .kelas h2 { /* Dibuat spesifik */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.class-container .desc {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.materi-section h3 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.materi-section ul {
+    margin-left: 1.2rem;
+    list-style-type: disc;
+}
+
+.sub-section {
+    margin-top: 2rem;
+}
+
+/* Style untuk "Kelas Lainnya" */
+.kelas-lainnya {
+    margin-top: 3rem;
+}
+
+.kelas-lainnya h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Membuat style .card ini SPESIFIK agar tidak merusak card lain */
+.kelas-grid .card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    /* Menghapus style .card umum agar tidak bertabrakan */
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.kelas-grid .card:hover {
+    transform: translateY(-5px);
+}
+
+.kelas-grid .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.kelas-grid .card h4 {
+    margin: 0.5rem;
+    font-size: 1.1rem;
+    color: #000; /* Memastikan warna sama */
+    text-decoration: underline; /* Memastikan konsisten */
+}
+
+.kelas-grid .card p {
+    margin: 0 0.5rem 0.8rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Style untuk Modul Materi (BARU) */
+.module-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.icon-section {
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-section.blue { background-color: #3b82f6; }
+.icon-section.pink { background-color: #ec4899; }
+
+.content-section {
+    flex-grow: 1;
+}
+.module-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d47a1;
+    text-decoration: none;
+}
+.module-title:hover {
+    text-decoration: underline;
+}
+.sub-info {
+    font-size: 14px;
+    color: #555;
+    margin-left: 8px;
+}
+.module-btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.module-btn.mark {
+    background-color: white;
+    color: #4b5563;
+}
+.module-btn.mark:hover {
+    background-color: #f3f4f6;
+}
+.module-btn.done {
+    background-color: #10b981;
+    color: white;
+    border: 1px solid #10b981;
+}
+.assessment-details {
+    list-style-type: disc;
+    padding-left: 35px;
+    margin-top: 8px;
+    color: #4b5563;
+    font-size: 14px;
+}
+.assessment-content {
+    display: flex;
+    align-items: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 15px;
+        gap: 15px;
+    }
+    .class-container {
+        margin: 1.5rem auto;
+        padding: 0 1rem;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .profile-content {
+        padding: 20px;
+    }
+    .module-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .action-section {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}

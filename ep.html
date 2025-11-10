@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="overlay" onclick="closeSidebar()"></div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+        <a href="lp.html">Dashboard</a>
+        <a href="mycourse.html">My Courses</a>
+        <a href="kelas/TK1.html">Kelas 1</a>
+        <a href="kelas/TK2.html">Kelas 2</a>
+        <a href="kelas/TK3.html">Kelas 3</a>
+        <a href="kelas/TK4.html">Kelas 4</a>
+    </div>
+
+    <header class="navbar">
+        <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+        <h1 class="logo">TeKah</h1>
+        <a href="ep.html" class="nav-profile">
+            <img src="https://picsum.photos/40/40" alt="Profile">
+        </a>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-img">
+                <img src="https://picsum.photos/200/200?4" alt="Course">
+            </div>
+
+            <h2>Student</h2>
+
+            <div class="about">
+                <h3>About Falko</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt=""></a>
+                    <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="facts">
+                <h3>Facts</h3>
+                <p><strong>Terakhir Onlie:</strong> January 1, 2025</p>
+                <p><strong>Role:</strong> Student</p>
+            </div>
+        </aside>
+
+        <main class="profile-content">
+            <h1>General</h1>
+
+            <div class="tabs">
+                <button class="active">General</button>
+                <button>Change Password</button>
+            </div>
+
+            <form class="profile-form">
+                <h3>Settings</h3>
+                <label>Email</label>
+                <input type="email" value="student@gmail.com" />
+
+                <label>Firstname</label>
+                <input type="text" value="Aru" />
+
+                <label>Lastname</label>
+                <input type="text" value="" />
+
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </main>
+    </div>
+
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
