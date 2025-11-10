@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelas 1 - TeKah</title>
+    <title>Kelas 2</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -16,24 +16,24 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
-        
+
         <a href="../lp.html">Dashboard</a>
         <a href="../mycourse.html">My Courses</a>
     </div>
 
-    
+
     <header class="navbar">
-            <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
-            <h1 class="logo">TeKah</h1>
+        <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
+        <h1 class="logo">TeKah</h1>
         </div>
         <div class="profile-container">
-        
+
             <div class="profile-area">
                 <span class="user-name">Student</span>
-        
+
                 <img src="https://i.pravatar.cc/40" alt="Foto Profil" class="profile-picture" id="profilePictureButton">
             </div>
-        
+
             <div class="profile-dropdown" id="profileMenu">
                 <a href="ep.html">Edit Profile</a>
                 <div class="divider"></div>
@@ -56,7 +56,9 @@
             <div class="materi-section">
                 <h3>Presensi</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, magnam. Nam qui sapiente ut illo illum, unde aliquam non dicta accusamus doloremque quos, tempora delectus ratione voluptas pariatur officia temporibus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, magnam. Nam qui sapiente ut
+                    illo illum, unde aliquam non dicta accusamus doloremque quos, tempora delectus ratione voluptas
+                    pariatur officia temporibus.
                 </p>
                 <br>
                 <h3>Rencana Pembelajaran Semester</h3>
@@ -102,51 +104,52 @@
         <section class="kelas-lainnya">
             <h3>Kelas lainnya</h3>
             <div class="kelas-grid">
-                <a href="TK1.html">
-                <div class="card">
-                    <img src="https://picsum.photos/300/200?random=1" alt="Kelas 2" />
-                    <h4>Kelas 1</h4>
-                    <p>Lihat selengkapnya</p>
-                </div>
+                <a href="TK2.html">
+                    <div class="card">
+                        <img src="https://picsum.photos/300/200?random=1" alt="Kelas 2" />
+                        <h4>Kelas 2</h4>
+                        <p>Lihat selengkapnya</p>
+                    </div>
                 </a>
-        
+
                 <a href="TK3.html">
-                <div class="card">
-                    <img src="https://picsum.photos/300/200?random=2" alt="Kelas 3" />
-                    <h4>Kelas 3</h4>
-                    <p>Lihat selengkapnya</p>
-                </div>
+                    <div class="card">
+                        <img src="https://picsum.photos/300/200?random=2" alt="Kelas 3" />
+                        <h4>Kelas 3</h4>
+                        <p>Lihat selengkapnya</p>
+                    </div>
                 </a>
 
                 <a href="TK4.html">
-                <div class="card">
-                    <img src="https://picsum.photos/300/200?random=3" alt="Kelas 4" />
-                    <h4>Kelas 4</h4>
-                    <p>Lihat selengkapnya</p>
-                </div>
+                    <div class="card">
+                        <img src="https://picsum.photos/300/200?random=3" alt="Kelas 4" />
+                        <h4>Kelas 4</h4>
+                        <p>Lihat selengkapnya</p>
+                    </div>
                 </a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        </footer>
+    </footer>
 
     <script src="../script.js"></script>
 
     <script>
-    function toggleDone(button) {
-        if (button.classList.contains("mark")) {
-            button.classList.remove("mark");
-            button.classList.add("done");
-            button.innerHTML = '<i class="fas fa-check"></i> Done';
-        } else {
-            button.classList.remove("done");
-            button.classList.add("mark");
-            button.innerHTML = 'Mark as done';
+        function toggleDone(button) {
+            if (button.classList.contains("mark")) {
+                button.classList.remove("mark");
+                button.classList.add("done");
+                button.innerHTML = '<i class="fas fa-check"></i> Done';
+            } else {
+                button.classList.remove("done");
+                button.classList.add("mark");
+                button.innerHTML = 'Mark as done';
+            }
         }
-    }
     </script>
 
 </body>
+
 </html>
