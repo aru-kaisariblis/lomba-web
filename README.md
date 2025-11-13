@@ -7,4 +7,4 @@
 Coba aplikasinya langsung di sini: **[Link Deploy Vercel/Netlify/Heroku]**
 
 ### 💻 Teknologi
-Built with ❤️ using **Next.js, Supabase, & Chakra UI**.
+Built with ❤️ using **HTML, CSS, & JAVASCRIPT**.
