@@ -57,10 +57,10 @@ body {
     justify-content: space-between; /* Ditambahkan agar ikon profil ke kanan */
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #ddd;
     background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 .nav-left { /* Ditambahkan untuk mengelompokkan menu & logo */
     display: flex;
     align-items: center;
