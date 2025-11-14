@@ -4,7 +4,7 @@
 
 
 ### 🔗 Demo Link
-Coba aplikasinya langsung di sini: **[Link Deploy Vercel/Netlify/Heroku]**
+Coba aplikasinya langsung di sini: **https://tekah-web.vercel.app/**
 
 ### 💻 Teknologi
 Built with ❤️ using **HTML, CSS, & JAVASCRIPT**.
